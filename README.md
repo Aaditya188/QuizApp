@@ -3,7 +3,7 @@ Fun challenge to test your knowledge with the abililty to Chat other participato
 
 **Built with ❤ , Vue.js & Socket.io**
 
-### [**Demo**](https://quiz-app-619.herokuapp.com/)
+### [**Demo**](https://quizappnightcoders.netlify.app/)
 
 ## Project setup
 ```
