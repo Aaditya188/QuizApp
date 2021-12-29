@@ -1,0 +1,158 @@
+/*
+** Varialbes
+*/
+:root {
+    /* main */
+	--gray-light: #dcdcdc;
+	--gray-lighter: #e6eaed;
+	--gray-lightest: #f1f1f1;
+    --shadow: rgba(0, 0, 0, 0.325);
+    /* elements */
+    --nav-bkg: var(--gray-lightest);
+    --body-bkg: var(--gray-lighter);
+    --hover-span-bkg: lightgray;
+    --main-color: #69d7e6;
+    --color: #666;
+    --question-btn: lightslategrey;
+    --svg-main: var(--main-color);
+}
+body.theme-1 {
+    --nav-bkg: #ffb5b5;
+    --body-bkg: pink;
+    --hover-span-bkg: #bdbdbd;
+    --main-color: #f48fb1;
+    --color: #757575;
+    --question-btn: #ba68c8;
+    --svg-main: lightcoral;
+}
+
+
+/*
+** 
+*/
+* {box-sizing: border-box}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--body-bkg);
+}
+ul {
+    padding: 0;
+    margin: 0
+}
+
+#app {
+    font-family: 'Quicksand', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: var(--color);
+    overflow-x: hidden; 
+}
+.pages-enter-active, .pages-leave-active {
+    transition: all .3s ease-in-out
+}
+.pages-enter, .pages-leave-to {
+    transform: translateX(3em);
+    opacity: 0
+}
+
+
+
+
+/**
+*****  Global Classes
+**/
+.container {
+	padding: 0 2%
+}
+.cart {
+    width: 100%;
+    max-width: 50em;
+    margin: 35px auto;
+    padding: 20px 20px 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 34px var(--shadow);
+}
+ul.progress {
+    color: #fff;
+    div.wrapper {
+        margin-bottom: 10px;
+        display: inline-block;
+        li {
+            display: inline-block;
+            background-color: var(--main-color);
+            vertical-align: middle;
+            border: 3px solid transparent;
+            transition: 1s;
+            &.progress-item {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                padding: 7px;
+                position: relative;
+                font-weight: 800;
+            }
+            &.progress-line {
+                width: auto;
+                height: auto;
+                border-radius: 0;
+                margin: auto -1px;
+                padding: 0 1.5em;
+                letter-spacing: .5px
+            }
+        }        
+        &.active {
+            li.progress-item {
+                color: #eee;
+                box-shadow: 0px 0px 5px 3px var(--shadow);
+            }
+            li.progress-line {
+                background-color: var(--gray-light)
+            }
+            &~.wrapper li {
+                background-color: var(--gray-light)
+            }     
+        }        
+    }
+
+}
+.lead {
+    font-size: 18px;
+    font-weight: 500
+}
+input, select {
+    @extend .form-item;
+}
+.form-item {
+    font-size: 16px;
+    width: 330px;
+    width: 100%;
+    border-radius: 4px;
+    padding: 10px;
+    color: var(--color);
+    outline-color: lightblue;
+    transition: .3s;
+    border: 1px solid #aaa;
+    font-family: inherit;
+    &[type="submit"] {
+        @extend .btn;
+        color: #eee;
+        font-weight: bold;
+        border-color: transparent;
+    };
+}
+.btn {
+    background-color: var(--main-color);
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 10px 20px;
+    width: auto;
+    &:hover {
+        box-shadow: inset 0px 0px 34px rgba(0, 0, 0, 0.1),
+                        0px 2px 13px var(--shadow);
+    }
+    &:focus {
+        box-shadow: inset 0px 0px 34px rgba(0, 0, 0, 0.2);
+    }
+}  
